@@ -1,3 +1,4 @@
+#codigo no utilizado
 import pandas as pd
 
 # Leer el archivo CSV
