@@ -14,3 +14,9 @@ El Gradient Boosting Classifier es otro modelo basado en ensambles que combina m
 Cada uno de estos modelos se encapsula en un pipeline que también incluye la etapa de estandarización de características utilizando StandardScaler. La estandarización de características es importante para garantizar que todas las características tengan la misma escala y no se vean afectadas por diferentes rangos o distribuciones.
 
 Cada pipeline se entrena utilizando el conjunto de datos de entrenamiento y se guarda en el diccionario fit_models para su uso posterior.
+
+En cada uno de los pipelines, se utiliza StandardScaler para estandarizar las características antes de ajustar el modelo correspondiente. La estandarización se realiza para asegurar que todas las características tengan una escala similar y evitar que características con valores más grandes dominen el proceso de aprendizaje.
+
+Cada modelo se entrena utilizando el pipeline correspondiente y se almacena en el diccionario fit_models. Luego, se utiliza el modelo de Bosque Aleatorio (RandomForestClassifier) para hacer una predicción en los datos de prueba y se guarda en un archivo llamado "exercises.pkl" utilizando pickle.
+
+En resumen, los modelos utilizados en los pipelines son Regresión Logística, Clasificador de Ridge, Clasificador de Bosque Aleatorio y Clasificador de Reforzamiento de Gradiente. Cada modelo tiene sus propias características y se utilizan para realizar la clasificación en el conjunto de datos.
