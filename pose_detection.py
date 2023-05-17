@@ -9,11 +9,11 @@ mp_drawing = mp.solutions.drawing_utils
 mp_holistic = mp.solutions.holistic 
 #postura del triangulo "triangle pose"
 #postura del warrior pose "warrior pose"
-#postura del arbol "tree pose"
+#postura del arbol "warrior pose"
 #definimos un clase name adecuadamanet a la posicion que queremos detectar
-class_name= "tree pose"
+class_name= "warrior pose"
 #indicamos la ruta del video a estudiar
-cap = cv2.VideoCapture("videos\posicion del arbol.mp4")
+cap = cv2.VideoCapture("videos\posicion del guerrero II 1.mp4")
 # Initiate holistic model
 
 #definimos la confianza mínima requerida para detectar un objeto en la imagen

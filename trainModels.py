@@ -15,7 +15,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, train_s
 #postura del triangulo "triangle pose"
 #postura del warrior pose "warrior pose"
 #postura del arbol "tree pose"
-df[df['class']=='tree pose']
+df[df['class']=='warrior pose']
 #Se define un diccionario de pipelines, donde cada pipeline aplica una serie de transformaciones a los datos antes de ajustar un modelo específico:
 pipelines = {
     'lr':make_pipeline(StandardScaler(), LogisticRegression(solver='lbfgs', max_iter=10000)),
