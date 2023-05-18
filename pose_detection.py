@@ -9,11 +9,11 @@ mp_drawing = mp.solutions.drawing_utils
 mp_holistic = mp.solutions.holistic 
 #postura del triangulo "triangle pose"
 #postura del warrior pose "warrior pose"
-#postura del arbol "warrior pose"
+#postura del arbol "tree pose"
 #definimos un clase name adecuadamanet a la posicion que queremos detectar
-class_name= "warrior pose"
+class_name= "triangle pose"
 #indicamos la ruta del video a estudiar
-cap = cv2.VideoCapture("videos\posicion del guerrero II 1.mp4")
+cap = cv2.VideoCapture("videos\postura del triangulo.mp4")
 # Initiate holistic model
 
 #definimos la confianza mínima requerida para detectar un objeto en la imagen
@@ -22,7 +22,6 @@ with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=
     
     while cap.isOpened():
         ret, frame = cap.read()
-        
         #le damos a la imagen un formato RGB debido que el modelo de Mediapipe espera imágenes en formato RGB.
         image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         #desactivamos la capacidad de estritura de la imagen para ahorra procesamiento
