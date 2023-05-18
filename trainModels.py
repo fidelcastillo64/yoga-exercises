@@ -15,8 +15,9 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, train_s
 #postura del triangulo "triangle pose"
 #postura del warrior pose "warrior pose"
 #postura del arbol "tree pose"
-df[df['class']=='warrior pose']
+#df[df['class']=='warrior pose']
 #Se define un diccionario de pipelines, donde cada pipeline aplica una serie de transformaciones a los datos antes de ajustar un modelo específico:
+#Un pipeline de datos se compone de tres pasos: un origen de datos, un paso de procesamiento o transformación de datos y un destino de datos.
 pipelines = {
     'lr':make_pipeline(StandardScaler(), LogisticRegression(solver='lbfgs', max_iter=10000)),
     'rc':make_pipeline(StandardScaler(), RidgeClassifier()),
